@@ -4,13 +4,198 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>meaung's website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet">
+    <style>
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "Mulish", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+
+        background-color: #eeeeee;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      img,
+      picture {
+        max-width: 100%;
+        display: block;
+      }
+
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+        color: currentColor;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      ul.cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 1rem;
+      }
+
+      article.card {
+        padding: 1.3rem;
+        height: 100%;
+
+        border-color: black;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 15px; 
+      }
+
+      article.card > h3 {
+        margin: 0;
+        padding: 0;
+      }
+
+      article.card > p {
+        margin-bottom: 0;
+        text-align: justify;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+
+      article.card > ul {
+        margin-top: 1rem;
+      }
+    </style>
+    <title>meaung's Website</title>
   </head>
 
   <body>
-    <h1>
-      meaung's website
-    </h1>
+    <header>
+      <h1>Myint Myat Aung (meaung)</h1>
+      <nav>
+        <ul>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="publications">
+        <h2>Publications</h2>
+        <ul class="cards">
+          <li>
+            <article class="card">
+              <h3>An ABI-Level Approach: Implementing a UEFI Bootloader and Kernel from First Principles</h3>
+              <p>
+                DOI: <a href="https://doi.org/10.1109/ICAIT68809.2025.11236747">10.1109/ICAIT68809.2025.11236747</a>
+              </p>
+              <ul>
+                <li>Lead Author</li>
+                <li>2025 6th International Conference on Advanced Information Technologies (ICAIT)</li>
+              </ul>
+              <p>
+                This paper presents the implementation of a minimalist UEFI x64 bootloader and kernel entirely in FASM
+                assembly, without relying on external toolchains.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Implementing Hadoop and Moodle Integrated Student Support System</h3>
+              <p>
+                DOI: <a href="https://doi.org/10.1109/ICAIT65209.2024.10754929">10.1109/ICAIT65209.2024.10754929</a>
+              </p>
+              <ul>
+                <li>Lead Author</li>
+                <li>2024 5th International Conference on Advanced Information Technologies (ICAIT)</li>
+              </ul>
+              <p>
+                This paper presents a system architecture that integrates Hadoop MapReduce into Moodle, a popular LMS,
+                for analyzing academic data.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </article>
+      <article id="projects">
+        <h2>Projects</h2>
+        <ul class="cards">
+          <li>
+            <article class="card">
+              <h3>Amethyst Linux</h3>
+              <p>
+                A minimal musl-based x64 linux distribution
+              </p>
+              <ul>
+                <li>Supervision suite: s6</li>
+                <li>Init system: s6-init</li>
+                <li>Display server protocol: Wayland</li>
+                <li>Package manager: Custom overlay-based package manager</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>simpleroute</h3>
+              <p>
+                <a href="https://github.com/posalusa24/simpleroute/blob/main/text/text.adoc">simpleroute - GitHub</a>
+              </p>
+              <p>
+                This paper describes a simple implementation of the traceroute utility in C, aptly named simpleroute.
+              </p>
+              <p>
+                simpleroute uses no external libraries; it relies on C standard library functions and Linux system calls
+                to provide needed functionality.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>WRIST</h3>
+              <p>
+                Wi-Fi RSSI-based Indoor Spatial Tracking (Client Android App and Server)
+              </p>
+              <p>
+                <a href="https://github.com/meaung/wrist">https://github.com/meaung/wrist</a>
+              </p>
+              <p
+                style="display: flex; flex-direction: row; height: 10rem; gap: 0.5rem; overflow-x: auto; justify-content: center">
+                <img src="wrist1.jpg"></img>
+                <img src="wrist2.jpg"></img>
+              </p>
+            </article>
+          </li>
+        </ul>
+      </article>
+    </main>
   </body>
 
 </html>
